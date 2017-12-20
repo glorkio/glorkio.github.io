@@ -1,27 +1,32 @@
 <html>
 <body>
 <style>
-#leaderboard { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; border-collapse: collapse; width: 100% }
-#leaderboard td, #leaderboard th { border: 1px solid #ddd; padding: 8px; }
-#leaderboard tr:nth-child(even){ background-color: #f2f2f2; }
-#leaderboard tr:hover{ background-color: #ddd; }
-#leaderboard td { border: 1px solid #ddd; padding: 8px; text-align: right }
-#leaderboard th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #4CAF50; color: white; }
-#leaderboard caption { padding-top: 12px; padding-bottom: 12px; text-align: center; background-color: #4CAF50; color: white; }
+.leaderboard { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; border-collapse: collapse; width: 100% }
+.leaderboard tr:nth-child(even){ background-color: #f2f2f2; }
+.leaderboard tr:hover{ background-color: #ddd; }
+.leaderboard td { border: 1px solid #ddd; padding: 8px; text-align: right }
+.leaderboard th { border: 1px solid #ddd; padding: 8px; padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #4CAF50; color: white; }
+.leaderboard caption { padding-top: 12px; padding-bottom: 12px; text-align: center; background-color: #4CAF50; color: white; }
+
+.missing { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; border-collapse: collapse; width: 100% }
+.missing tr:nth-child(even){ background-color: #f2f2f2; }
+.missing tr:hover{ background-color: #ddd; }
+.missing td { border: 1px solid #ddd; padding: 8px; text-align: center }
+.missing th { border: 1px solid #ddd; padding: 8px; padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #4CAF50; color: white; }
+.missing caption { padding-top: 12px; padding-bottom: 12px; text-align: center; background-color: #4CAF50; color: white; }
 </style>
-
-Hello World!
-
 <style>
 .board { vertical-align: top }
 .block { vertical-align: middle }
 </style>
+
+
 <table>
 <tr><td class="board" id="dayleader">
-<table id="leaderboard"><caption><b>Today\'s Leaderboard (Top 10)</caption><tr><th>Rank</th><th>Date</th><th>Player</th><th>Score</th></tr><tr><td colspan="4">Leaderboard Unavailable</td></tr></table>
+<table class="missing"><caption><b>Today's Leaderboard (Top 10)</caption><tr><th>Rank</th><th>Date</th><th>Player</th><th>Score</th></tr><tr><td colspan="4">Leaderboard Unavailable</td></tr></table>
 </td>
 <td class="board" id="allleader">
-<table id="leaderboard"><caption><b>All-Time Leaderboard (Top 10)</caption><tr><th>Rank</th><th>Date</th><th>Player</th><th>Score</th></tr><tr><td colspan="4">Leaderboard Unavailable</td></tr></table>
+<table class="missing"><caption><b>All-Time Leaderboard (Top 10)</caption><tr><th>Rank</th><th>Date</th><th>Player</th><th>Score</th></tr><tr><td colspan="4">Leaderboard Unavailable</td></tr></table>
 </td>
 </table>
 
