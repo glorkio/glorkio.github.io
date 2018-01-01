@@ -17,6 +17,6 @@ assets: ../aplows.io/client/img ../aplows.io/client/audio
 all: player.min.js js.cookie.js socket.io.js index.html assets
 
 deploy: all
-#	git add .
-#	git commit -a -m "Test";
-#	git push origin master
+	git add .
+	git commit -a -m "" --allow-empty-message
+	git push origin master
