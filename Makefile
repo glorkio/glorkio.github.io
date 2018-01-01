@@ -19,4 +19,7 @@ assets: ../aplows.io/client/img ../aplows.io/client/audio
 
 all: player.min.js js.cookie.js index.html assets favi.png virus-background.png
 
-
+deploy: all
+#	git add .
+#	git commit -a -m "Test";
+#	git push origin master
