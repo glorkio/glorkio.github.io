@@ -2,7 +2,7 @@
 <html>
 <body>
 <script src="/js.cookie.js" aysnc></script>
-<link rel="icon" type="image/png" href="/favi.png">
+<link rel="icon" type="image/png" href="/img/favi.png">
 <div id="signDiv" class = "viral">
 	<html height="100%" style = "overflow: hidden;">
 <!--<link rel="shortcut icon" href="/img/favi.jpg" />-->
@@ -10,7 +10,7 @@
 <div >
 <style>
 .viral {
-	background-image: url("/virus_background.png");
+	background-image: url("/img/virus_background.png");
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -92,14 +92,6 @@ text-decoration: none;
 display: inline-block;
 font-size: 16px;
 }
-.discord {
-				background-image: url(https://vignette.wikia.nocookie.net/logopedia/images/d/dd/Discord.png/revision/latest?cb=20160802133240);
-				background-color: #7289da;
-				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 0 4px 0 #6077c8;
-			}
-			.discord:hover {
-				background-color: #6077c8;
-			}
 .server {
 background-color: gray; /* Green */
 border: none;
@@ -242,7 +234,7 @@ background-color: #00B8E6;
 	font-size: 20px;
 	padding-left: 5px;
 	padding-right: 8px;
-	cursor: url(../img/cursor1.png), pointer;;
+	//cursor: url(../img/cursor1.png), pointer;;
 	padding-top: 28px;
 	padding-bottom: 10px;
 	position: absolute;
@@ -321,7 +313,7 @@ Server: <select id = 'serverSelect' width = '300'></select>
 var localurl  = 'http://localhost:5000/api/leader/virus';
 var remoteurl = 'https://salty-scrubland-48776.herokuapp.com/api/leader/virus';
 var leaderurl = remoteurl;
-const serverurl = ["https://virusio-test1.herokuapp.com","https://glork-usa1.herokuapp.com","https://glork-usa2.herokuapp.com","https://glork-eu1.herokuapp.com","https://glork-eu2.herokuapp.com","http://localhost:2000"];
+const serverurl = ["http://virusio-test1.herokuapp.com","http://glork-usa1.herokuapp.com","http://glork-usa2.herokuapp.com","http://glork-eu1.herokuapp.com","http://glork-eu2.herokuapp.com","http://localhost:2000"];
 const servername = ["US0","US1","US2","EU1","EU2","LC1"];
 var serverchoices = "";
 
@@ -414,7 +406,7 @@ for(var i=0; i<servername.length; i++){
     to {color: yellow;}
 }
 #deathdiv {
-background-image: url("/virus_background.png");
+background-image: url("/img/virus_background.png");
 	background-repeat:no-repeat;
 	background-size:cover;
 }
