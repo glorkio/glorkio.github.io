@@ -5,6 +5,7 @@
 <script src="/js.cookie.js" aysnc></script>
 <link rel="icon" type="image/png" href="/img/favi.png">
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Crushed"/>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fredoka+One"/>
 <div id="signDiv" class = "viral">
 	<html height="100%" style = "overflow: hidden;">
@@ -106,20 +107,52 @@ display: inline-block;
 border-radius: 5px;
 font-size: 16px;
 }
-.playbutton {
-background-color: #CC00FF; /* 00b8e6stoplight green */
+.joinbutton {
+background-color: white; /* 00b8e6stoplight green */
+font-family: "Open Sans";
 border: 2 px;
 border-radius: 5px;
 width:300px;
-color: white;
-padding: 30px 50px;
+color:#00b3b3;
+padding: 10px 30px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
 font-size: 32px;
+-moz-box-shadow: 0px 7px #f2f2f2;
+-webkit-box-shadow: 0px 7px #f2f2f2;
+box-shadow: 0px 7px #f2f2f2;
+}
+.joinbutton:hover {
+background-color: #E6E6E6;
+}
+.playbutton {
+background-color: #00E6E6; /* 00b8e6stoplight green */
+font-family: "Open Sans";
+border: 2 px;
+border-radius: 5px;
+width:300px;
+color: white;
+padding: 10px 30px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 32px;
+-moz-box-shadow: 0px 7px #00b3b3;
+-webkit-box-shadow: 0px 7px #00b3b3;
+box-shadow: 0px 7px #00b3b3;
+}
+.filler {
+width:300px;
+background-color:white;
+height:5px;
+border: 0px solid black;
+border-radius:2.5px;
+margin-top:17px;
+margin-bottom:10px;
 }
 .playbutton:hover {
-background-color: #B800E6;
+background-color: #00CCCC;
 }
 .readbutton {
 background-color: #00CCFF; /* stoplight green */
@@ -158,10 +191,7 @@ background-color: #00B8E6;
 	display: inline-block;
 	width: 300px;
 	padding: 18px;
-	background-color: #fff;
-	-moz-box-shadow: 0px 7px #c4c4c4;
-	-webkit-box-shadow: 0px 7px #c4c4c4;
-	box-shadow: 0px 7px #c4c4c4;
+	background-color: #595959;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
@@ -172,16 +202,16 @@ background-color: #00B8E6;
 	text-align:center;
 	font-size: 170px;
 	text-shadow:
-		0 1px 0 green,
-		0 2px 0 green,
-		0 3px 0 green,
-		0 4px 0 green,
-		0 5px 0 green,
-		0 6px 0 green,
-		0 7px 0 green,
-		0 8px 0 green,
-		0 9px 0 green;
-	color: lime;
+		0 1px 0 pink,
+		0 2px 0 pink,
+		0 3px 0 pink,
+		0 4px 0 pink,
+		0 5px 0 pink,
+		0 6px 0 pink,
+		0 7px 0 pink,
+		0 8px 0 pink,
+		0 9px 0 pink;
+	color: #FF667D;
 }
 #signDiv-username {
     text-align: center;
@@ -202,6 +232,16 @@ background-color: #00B8E6;
     font-family: 'Hammersmith One';
 	font-color: 'gray';
 	font-size: 36px;
+}
+#serverSelect {
+font-size:22px;
+color:white;
+background-color:#00E6E6;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+text-align:center;
 }
 #cookies_check_box {
   display: none;
@@ -280,16 +320,18 @@ background-color:"green";
 
 </div>
 <div class="menuCard" style = "display: inline-block; vertical-align: top; text-align:center">
-<p id = 'welcome' style = 'display:none; font-size:24px;'><b>Welcome back!</b><br><b>Your high score is <b><strong id = 'cookiescore'></strong><br></p>
+<p id = 'welcome' style = 'color:white;display:none; font-size:24px;'><b>Welcome back!</b><br><b>Your high score is <b><strong id = 'cookiescore'></strong><br></p>
 <input style="-webkit-user-select: text;" id='signDiv-username' type="text" maxlength="15" placeholder="Name for leaderboard" spellcheck="false" onkeydown="" autofocus="">
 
 <div style="color: #666666 ;text-shadow: -1px 1px rgba(255, 255, 255, 0.3)">
-Server: <select id = 'serverSelect' width = '300'></select>
-<button class = 'playbutton' onclick = "tutor()">Learn!</button>
-<button class = 'playbutton' id = 'signDiv-signIn'>Play!</button>
-<br style = 'height: 1px;'>
-<a  href ='https://docs.google.com/document/d/e/2PACX-1vTzty3E6JCtsSL5DMr6ccEd6vuu_ugV-iwrnSjVV5NYbsowRnBikQXjTuurwS_CL1DGgQoCWNQ07hyC/pub' target="_blank"><button class = "readbutton">Read!</button></a>
-<br>
+<select id = 'serverSelect' width = '300'></select>
+<div class = "filler"></div>
+<button class = 'joinbutton' id = 'signDiv-signIn'><b>JOIN GAME</b></button>
+<div style = "margin-top:17px; margin-bottom:10px"></div>
+<button class = 'playbutton' onclick = "tutor()"><b>LEARN GAME</b></button>
+<div class = "filler"></div>
+<a  href ='https://docs.google.com/document/d/e/2PACX-1vTzty3E6JCtsSL5DMr6ccEd6vuu_ugV-iwrnSjVV5NYbsowRnBikQXjTuurwS_CL1DGgQoCWNQ07hyC/pub' target="_blank"><button class = "playbutton"><b>INSTRUCTIONS</b></button></a>
+<br><br>
 <a style = 'font-size:24px;"'href = 'https://docs.google.com/document/d/e/2PACX-1vSi0lykdn0ALdYgNQaObkr6LXTs0OGnL-6fOAm2vXUTuFEmnCtS12jfKV5zmVcWOSUsQo_4bPiDLHXB/pub' target="_blank">Credits</a>&nbsp;&nbsp;
 <a style = 'font-size:24px;'href = 'http://twitter.com/glorkiogame' target="_blank">Follow!</a>
 
@@ -308,12 +350,12 @@ Server: <select id = 'serverSelect' width = '300'></select>
 <audio id="audiotag11" src="/audio/player-click.mp3" preload="auto"></audio>
 <audio id="audiotag12" src="/audio/player-newtip.mp3" preload="auto"></audio>
 <style>
-.leaderboard { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; border-collapse: collapse; width: 100%; font-size:10px;}
-.leaderboard tr:nth-child(even){ background-color: #f2f2f2; }
-.leaderboard tr:hover{ background-color: #ddd; }
-.leaderboard td { border: 1px solid #ddd; padding: 8px; text-align: right }
-.leaderboard th { border: 1px solid #ddd; padding: 8px; padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #1AFF1A; color: black; }
-.leaderboard caption { padding-top: 12px; padding-bottom: 12px; text-align: center; background-color: #1AFF1A; color: black; }
+.leaderboard { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; border-collapse: collapse; width: 100%; font-size:10px;color:white;}
+.leaderboard tr:nth-child(even){ background-color: #8C8C8C; }
+.leaderboard tr:hover{ background-color: #999999; }
+.leaderboard td { border: 1px solid #ddd; padding: 8px; text-align: right;background-color: #8C8C8C; color:white; }
+.leaderboard th { font-size: 16px;border: 1px solid #ddd; padding: 8px; padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #66FFFF; color: white; }
+.leaderboard caption { font-size: 20px; padding-top: 12px; padding-bottom: 12px; text-align: center; background-color: #595959; color: white; }
 .board { vertical-align: top }
 .block { vertical-align: middle }
 </style>
@@ -353,7 +395,7 @@ var getleader = function() {
 }
 var loadServerOption = function(id){
 	client.get(serverurl[id]+"/api/players",function(response){
-		var thischoice = "<option" + ((serverchoices ==="")?" selected":"") + " value='" + serverurl[id] + "'>" + servername[id] + " [" + response + " players]</option>";
+		var thischoice = "&nbsp;&nbsp;&nbsp;&nbsp;<option" + ((serverchoices ==="")?" selected":"") + " value='" + serverurl[id] + "'>" + servername[id] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [" + response + " players]</option>&nbsp;&nbsp;&nbsp;&nbsp;";
 		serverchoices += thischoice;
 		document.getElementById("serverSelect").innerHTML = serverchoices;
 		console.log(serverchoices);
@@ -361,9 +403,10 @@ var loadServerOption = function(id){
 }
 
 for(var i=0; i<servername.length; i++){
+   if ((document.domain !== "glork.io") || (servername[i]==="DEV")) {
 	loadServerOption(i);
+   }
 }
-
 
 //<option value = "http://glork-usa2.herokuapp.com">USA 2</option>
 
