@@ -299,6 +299,27 @@ div#got_it:active{
 * {
 user-select:none;
 }
+.blink_me {
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+.blink_me2 {
+  animation: blinker2 2s linear infinite;
+}
+
+@keyframes blinker2 {  
+  55% { opacity: 0; }
+}
+.blink_me3 {
+  animation: blinker3 2s linear infinite;
+}
+
+@keyframes blinker3 {  
+  60% { opacity: 0; }
+}
 .link {
 border-radius:5px;
 background-color:"green";
@@ -325,7 +346,7 @@ background-color:"green";
 <div style="color: #666666 ;text-shadow: -1px 1px rgba(255, 255, 255, 0.3)">
 <select id = 'serverSelect' width = '300'></select>
 <div class = "filler"></div>
-<button class = 'joinbutton' id = 'signDiv-signIn'><b>JOIN GAME</b></button>
+<button class = 'joinbutton' id = 'signDiv-signIn'><b>JOIN</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class = "blink_me">&#x25b6;</b><b class = "blink_me2">&#x25b6;</b><b class = "blink_me3">&#x25b6;</b></button>
 <div style = "margin-top:17px; margin-bottom:10px"></div>
 <button class = 'playbutton' onclick = "tutor()"><b>LEARN GAME</b></button>
 <div class = "filler"></div>
