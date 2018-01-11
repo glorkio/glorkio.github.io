@@ -1,22 +1,29 @@
+<!DOCTYPE html>
 <html>
-<body>
-
-<script src="/js.cookie.js" aysnc></script>
-<link rel="icon" type="image/png" href="/img/favi.png">
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Crushed"/>
+<head>
+<title>Glork.io</title>
+<meta charset="utf-8">
+<meta name="description" content="Replicate and mutate your virus to achieve world domination">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="img/favicon.ico?v=eE5Kg5RPWK">
+<link rel="stylesheet" type="text/css" href="font/Crushed.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Crushed"/> -->
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Fredoka+One"/>
-<div id="signDiv" class = "viral">
-	<html height="100%" style = "overflow: hidden;">
-<!--<link rel="shortcut icon" href="/img/favi.jpg" />-->
-<title>Glork.io</title>
-<div >
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111939838-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-111939838-1');
+</script>
 <style>
 .viral {
-	background-image: url("/img/virus_background.png");
-	background-repeat:no-repeat;
-	background-size:cover;
+	background-color: pink;
+	background-image: url("img/virus_background.png");
+	background-size: cover;
 }
+
 .startMenu {
     position: relative;
     margin: auto;
@@ -71,20 +78,17 @@
   opacity: 1;
   right: 0;
 }
-</style>
-<style>
+
 .panel {
 display:inline-block;
-width:300px;
-padding-top:10px;
-padding-bottom:10px;
-padding-left:20px;
-padding-right:20px;
-background-color: white;
-border-radius: 10px;
-border: 5px solid black;
-font-size:150%;
+width: 300px;
+padding: 18px;
+background-color: #595959;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
 }
+
 .button {
 background-color: #4CAF50; /* Green */
 border: none;
@@ -95,82 +99,84 @@ text-decoration: none;
 display: inline-block;
 font-size: 16px;
 }
-.server {
-background-color: gray; /* Green */
-border: none;
-color: black;
-padding: 10px 20px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-border-radius: 5px;
-font-size: 16px;
-}
-.joinbutton {
 
-background-color: white; /* 00b8e6stoplight green */
-font-family: "Open Sans";
-font-weight:bolder;
-border: 2 px;
-border-radius: 5px;
-width:300px;
-color:#00b3b3;
-padding: 10px 30px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 32px;
--moz-box-shadow: 0px 7px #f2f2f2;
--webkit-box-shadow: 0px 7px #f2f2f2;
-box-shadow: 0px 7px #f2f2f2;
+#server {
+  background-color: pink; /* Green */
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+}
+
+.joinbutton {
+  background-color: white; /* 00b8e6stoplight green */
+  font-family: "Open Sans";
+  font-weight:bolder;
+  border: 2px;
+  border-radius: 5px;
+  width:300px;
+  color:#00b3b3;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  -moz-box-shadow: 0px 7px #f2f2f2;
+  -webkit-box-shadow: 0px 7px #f2f2f2;
+  box-shadow: 0px 7px #f2f2f2;
 }
 .joinbutton:hover {
-background-color: #E6E6E6;
+  background-color: #E6E6E6;
 }
+
 .playbutton {
-background-color: #00E6E6; /* 00b8e6stoplight green */
-font-family: "Open Sans";
-border: 2 px;
-border-radius: 5px;
-width:300px;
-color: white;
-padding: 10px 30px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 32px;
--moz-box-shadow: 0px 7px #00b3b3;
--webkit-box-shadow: 0px 7px #00b3b3;
-box-shadow: 0px 7px #00b3b3;
-}
-.filler {
-width:300px;
-background-color:white;
-height:5px;
-border: 0px solid black;
-border-radius:2.5px;
-margin-top:17px;
-margin-bottom:10px;
+  background-color: #00E6E6; /* 00b8e6stoplight green */
+  font-family: "Open Sans";
+  border: 2px;
+  border-radius: 5px;
+  width:300px;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  -moz-box-shadow: 0px 7px #00b3b3;
+  -webkit-box-shadow: 0px 7px #00b3b3;
+  box-shadow: 0px 7px #00b3b3;
 }
 .playbutton:hover {
-background-color: #00CCCC;
+  background-color: #00CCCC;
 }
-.readbutton {
-background-color: #00CCFF; /* stoplight green */
-border: 2 px;
-border-radius: 5px;
-width:300px;
-color: white;
-padding: 15px 50px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 32px;
+
+.linkbutton {
+  text-decoration: none;
+  background-color: #00E6E6; /* 00b8e6stoplight green */
+  font-family: "Open Sans";
+  border: 2px;
+  border-radius: 5px;
+  width:240px;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  display: inline-block;
+  font-size: 32px;
+  -moz-box-shadow: 0px 7px #00b3b3;
+  -webkit-box-shadow: 0px 7px #00b3b3;
+  box-shadow: 0px 7px #00b3b3;
 }
-.readbutton:hover {
-background-color: #00B8E6;
+
+.filler {
+  width:300px;
+  background-color:white;
+  height:5px;
+  border: 0px solid black;
+  border-radius:2.5px;
+  margin-top:17px;
+  margin-bottom:10px;
 }
-#nam {
+.nam {
 	width: 100%;
 	white-space: nowrap;
 	text-align: center;
@@ -231,18 +237,16 @@ background-color: #00B8E6;
 }
 #welcome {
     font-family: 'Hammersmith One';
-	font-color: 'gray';
 	font-size: 36px;
 }
 #serverSelect {
-font-size:22px;
-color:white;
-background-color:#00E6E6;
-padding-left: 20px;
-padding-right: 20px;
-padding-top: 10px;
-padding-bottom: 10px;
-text-align:center;
+   font-size:22px;
+   color:white;
+   background-color:#00E6E6;
+   padding: 10px 30px;
+   width:300px;
+   text-align:center;
+   border-radius: 5px;
 }
 #cookies_check_box {
   display: none;
@@ -268,38 +272,9 @@ text-align:center;
   color: #FFFFFF;
   font-family: "Baloo Paaji";
 }
-#got_it {
-	display: inline-block;
-	background-color: #8a590e;
-	border: solid 2px #47310f;
-	text-align: center;
-	line-height: 15px;
-	border-radius: 0px 14px 14px 0px;
-	font-size: 20px;
-	padding-left: 5px;
-	padding-right: 8px;
-	//cursor: url(../img/cursor1.png), pointer;;
-	padding-top: 28px;
-	padding-bottom: 10px;
-	position: absolute;
-	width: 60px;
-  height:33px;
-	top: 0px;
-	left: 300px;
-	color: #FFFFFF;
-	font-family: "Baloo Paaji";
-}
 
-div#got_it:hover{
-  background-color: #47310f;
-  border: solid 3px #8a590e;
-}
-div#got_it:active{
-  background-color: #160c03;
-  border: solid 3px #572c02;
-}
 * {
-user-select:none;
+  user-select:none;
 }
 .blink_me {
   animation: blinker 2s linear infinite;
@@ -323,154 +298,15 @@ user-select:none;
   60% { opacity: 0; }
 }
 .link {
-border-radius:5px;
-background-color:"green";
+  border-radius:5px;
 }
-</style>
-<!--<div id="cookies_check_box" style="display: inline-block; left:20px; top: 10px;">
- 		<div id="cookies_check">
- 				This site uses cookies to improve your experience.
- 		</div>
- 		<div id="got_it"> Got it</div>
- 	</div>-->
-
-<div style = "width:100%;height:100%"></div>
-<div align="center" id="nam" style="text-align: center;display: inline; visibility: visible; position: fixed; z-index: 1;left: 50%; top: 50%; transform: translate(-50%, -50%);">
-<div id="gameName">GLORK.IO</div>
-<div class = 'menuCard'style = "display: inline-block; vertical-align: top; left:35%">
-<table id = "leader2" class="leaderboard"><caption><b>Today's Leaderboard</caption><tr><th>Rank</th><th>Date</th><th>Player</th><th>Score</th></tr><tr><td colspan="4">Leaderboard Unavailable</td></tr></table>
-
-</div>
-<div class="menuCard" style = "display: inline-block; vertical-align: top; text-align:center">
-<p id = 'welcome' style = 'color:white;display:none; font-size:24px;'><b>Welcome back!</b><br><b>Your high score is <b><strong id = 'cookiescore'></strong><br></p>
-<input style="-webkit-user-select: text;" id='signDiv-username' type="text" maxlength="15" placeholder="Name for leaderboard" spellcheck="false" onkeydown="" autofocus="">
-
-<div style="color: #666666 ;text-shadow: -1px 1px rgba(255, 255, 255, 0.3)">
-<select id = 'serverSelect' width = '300'></select>
-<div class = "filler"></div>
-<button class = 'joinbutton' id = 'signDiv-signIn'><b>JOIN</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class = "blink_me">&#x25b6;</b><b class = "blink_me2">&#x25b6;</b><b class = "blink_me3">&#x25b6;</b></button>
-<div style = "margin-top:17px; margin-bottom:10px"></div>
-<button class = 'playbutton' onclick = "tutor()"><b>LEARN GAME</b></button>
-<div class = "filler"></div>
-<a  href ='https://docs.google.com/document/d/e/2PACX-1vTzty3E6JCtsSL5DMr6ccEd6vuu_ugV-iwrnSjVV5NYbsowRnBikQXjTuurwS_CL1DGgQoCWNQ07hyC/pub' target="_blank"><button class = "playbutton"><b>INSTRUCTIONS</b></button></a>
-<br><br>
-<a style = 'font-size:24px;"'href = 'https://docs.google.com/document/d/e/2PACX-1vSi0lykdn0ALdYgNQaObkr6LXTs0OGnL-6fOAm2vXUTuFEmnCtS12jfKV5zmVcWOSUsQo_4bPiDLHXB/pub' target="_blank">Credits</a>&nbsp;&nbsp;
-<a style = 'font-size:24px;'href = 'http://twitter.com/glorkiogame' target="_blank">Follow!</a>
-
-<!--<input id = "tips?" type = "checkbox" style = 'display:none;'>Game tips-->
-
-<audio id="audiotag1" src="/audio/rad-powerup.mp3" preload="auto"></audio>
-<audio id="audiotag2" src="/audio/rad-powerdown.mp3" preload="auto"></audio>
-<audio id="audiotag3" src="/audio/rad-damage.mp3" preload="auto"></audio>
-<audio id="audiotag4" src="/audio/cell-death.mp3" preload="auto"></audio>
-<audio id="audiotag6" src="/audio/cell-slurp.mp3" preload="auto"></audio>
-<audio id="audiotag5" src="/audio/medicine.mp3" preload="auto"></audio>
-<audio id="audiotag7" src="/audio/cancer.mp3" preload="auto"></audio>
-<audio id="audiotag8" src="/audio/host-death.mp3" preload="auto"></audio>
-<audio id="audiotag9" src="/audio/revival.mp3" preload="auto"></audio>
-<audio id="audiotag10" src="/audio/cancer-spawn.mp3" preload="auto"></audio>
-<audio id="audiotag11" src="/audio/player-click.mp3" preload="auto"></audio>
-<audio id="audiotag12" src="/audio/player-newtip.mp3" preload="auto"></audio>
-<style>
-.leaderboard { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; border-collapse: collapse; width: 100%; font-size:10px;color:white;}
+.leaderboard { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; border-collapse:collapse; width:100%; font-size:10px; color:white; }
 .leaderboard tr:nth-child(even){ background-color: #8C8C8C; }
 .leaderboard tr:hover{ background-color: #999999; }
-.leaderboard td { border: 1px solid #ddd; padding: 8px; text-align: right;background-color: #8C8C8C; color:white; }
-.leaderboard th { font-size: 16px;border: 1px solid #ddd; padding: 8px; padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #66FFFF; color: white; }
-.leaderboard caption { font-size: 20px; padding-top: 12px; padding-bottom: 12px; text-align: center; background-color: #595959; color: white; }
-.board { vertical-align: top }
-.block { vertical-align: middle }
-</style>
-<script>
-/*document.getElementById("got_it").onclick = function(){
-	document.getElementById("cookies_check_box").display = "none";
-}*/
-var localurl  = 'http://localhost:5000/api/leader/virus';
-var remoteurl = 'https://salty-scrubland-48776.herokuapp.com/api/leader/virus';
-var leaderurl = remoteurl;
-const serverurl = ["http://virusio-test1.herokuapp.com","http://glork-usa1.herokuapp.com","http://glork-usa2.herokuapp.com","http://glork-eu1.herokuapp.com","http://glork-eu2.herokuapp.com","http://localhost:2000"];
-const servername = ["DEV","US1","US2","EU1","EU2","LC1"];
-var serverchoices = "";
+.leaderboard td { border: 1px solid #ddd; padding:8px; text-align:right; background-color:#8C8C8C; color:white; }
+.leaderboard th { font-size:16px; border:1px solid #ddd; padding:8px; padding-top:12px; padding-bottom:12px; text-align:left; background-color:#66FFFF; color:white; }
+.leaderboard caption { font-size:20px; padding-top:12px; padding-bottom:12px; text-align:center; background-color:#595959; color:white; }
 
-var HttpClient = function() {
-    this.get = function(aUrl, aCallback) {
-        var anHttpRequest = new XMLHttpRequest();
-        anHttpRequest.onreadystatechange = function() { 
-            if (anHttpRequest.readyState === XMLHttpRequest.DONE) {
-               if (anHttpRequest.status === 200) {
-                  aCallback(anHttpRequest.responseText);
-               }
-            }
-        }
-        anHttpRequest.open( "GET", aUrl, true );            
-        anHttpRequest.send();
-    }
-}
-var client = new HttpClient();
-var getleader = function() {
-   client.get(leaderurl + '?top=10', function(response) {
-        document.getElementById("leader").innerHTML = response;
-   });
-   client.get(leaderurl + '?top=10&today', function(response) {
-        document.getElementById("leader2").innerHTML = response;
-   });
-}
-var loadServerOption = function(id){
-	client.get(serverurl[id]+"/api/players",function(response){
-		var thischoice = "&nbsp;&nbsp;&nbsp;&nbsp;<option" + ((serverchoices ==="")?" selected":"") + " value='" + serverurl[id] + "'>" + servername[id] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [" + response + " players]</option>&nbsp;&nbsp;&nbsp;&nbsp;";
-		serverchoices += thischoice;
-		document.getElementById("serverSelect").innerHTML = serverchoices;
-		console.log(serverchoices);
-	});
-}
-
-for(var i=0; i<servername.length; i++){
-   if ((document.domain !== "glork.io") || (servername[i]!=="DEV")) {
-	loadServerOption(i);
-   }
-}
-
-//<option value = "http://glork-usa2.herokuapp.com">USA 2</option>
-
-//var yourserver = 'https://virusio-test1.herokuapp.com/';//document.getElementById('serverSelect').value;
-//console.log('You where connected to '+yourserver);
-
-</script>
-
-</html>
-<br>
-<br>
-<!--<select class = 'server' id='server' placeholder = 'Select server'>
-   <a href = "http://kingofthehillusa1.herokuapp.com"><option id = 'usa1' value='usa1'>USA 1</option></a>
-   <!--<option id = 'usa2'value='usa2'>USA 2</option>
-   <a href = "http://kingofthehilleu1.herokuapp.com"><option id = 'eu1'value='eu1'>EU 1</option></a>
-   #linksContainer {
-	border-radius: 4px;
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
-	background-color: #fff;
-	text-align: right;
-	font-size: 20px;
-	padding: 8px;
-	-webkit-border-radius: 4px 0 0 0;
-	-moz-border-radius: 4px 0 0 0;
-	border-radius: 4px 0 0 0;
-}
-
-</select>-->
-</div>
-</div>
-<div class = 'menuCard'style = "display: inline-block; vertical-align: top;">
-<div id = "leader">
-<style>.leaderboard td { text-align: center }</style>
-<table class="leaderboard"><caption><b>All-Time Leaderboard</caption><tr><th>Rank</th><th>Date</th><th>Player</th><th>Score</th></tr><tr><td colspan="4">Leaderboard Unavailable</td></tr></table>
-</div>
-</div>
-</div>
-</div>
-</div>
-<style> 
 #linksContainer {
 	border-radius: 4px;
 	position: absolute;
@@ -485,17 +321,14 @@ for(var i=0; i<servername.length; i++){
 	border-radius: 4px 0 0 0;
 }
 .alert {
-	position:absolute;
-	//margin:auto;
-	//width:20%;
-	left:window.innerWidth/2;
-	top:10px;
+    position:absolute;
+    top:10px;
     color: red;
     -webkit-animation-name: example; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
     animation-name: example;
     animation-duration: 2s;
-	animation-direction: alternate;
+    animation-direction: alternate;
     animation-iteration-count: 300;
 }
 /* Chrome, Safari, Opera */
@@ -509,48 +342,18 @@ for(var i=0; i<servername.length; i++){
     to {color: yellow;}
 }
 #deathdiv {
-background-image: url("/img/virus_background.png");
-	background-repeat:no-repeat;
-	background-size:cover;
+   background-image: url("img/virus_background.png");
+   background-repeat:no-repeat;
+   background-size:cover;
 }
-</style>
-<div id = "tutorDiv" style = 'display:none;'>
-</div>
-<div id = "deathDiv" style = 'display:none;'>
-<div align="center" id="nam" style="display: inline; visibility: visible; position: fixed; z-index: 1;
-left: 50%; top: 50%; transform: translate(-50%, -50%);width:500px;">
-<div class="panel">
-<h2>ERADICATED</h2>
-<p id = 'scored'></p>
-<p id = 'best' style = 'display:none;'>New Personal Best!</p>
-<br>
-<button class = 'playbutton' onclick = "tutor()">Learn!</button><br>
-<button class = "playbutton" onclick = "playp();">Play!</button><br>
-<a href ='https://docs.google.com/forms/d/e/1FAIpQLScvbeq5FP_tD0j7cHROgq4CBPLMsePMRH9UE7J3g7_hUR-zoA/viewform' target="_blank"><button class = "readbutton">Feedback!</button></a>
-</div>
-</div>
-</div>
-<div>
-
-<div id="gameDiv" style="display:none;background-color:#e6e6e6">
-	<canvas id="ctx" width="500" height="500" style="border:1px solid #000000;"></canvas>
-	<div id = "centerInfoHolder">
-	<div id = "vvv"></div>
-	</div>
-	<div id="topInfoHolder">
-			<div id="scoreboard">
-			</div>
-		</div>
-		<canvas id="minimap" width = "150" height = "150" style = 'position:absolute; background-color:white; right:20px; bottom:20px; width="100"; height="100";border:4px solid #000000;overflow-y:scroll;overflow-x:scroll'></canvas>
-<style>
 #minimap {
-opacity:0.5;
+   opacity:0.5;
 }
 #vvv {
-font-size:30px;
-background-color: rgba(255, 255, 255, 0.3);
+   font-size:30px;
+   background-color: rgba(255, 255, 255, 0.3);
 }
-#vvv td {vertical-align:top;}
+#vvv td { vertical-align:top; }
 #topInfoHolder {
 	position: absolute;
 	right: 20px;
@@ -567,37 +370,185 @@ background-color: rgba(255, 255, 255, 0.3);
 	text-align:center;
 	bottom: 20px;
 }
-#leadertable{
-	width:100%;
-	border: 0px solid black;
-	border-collapse: collapse;
-	font-size: 20px;
-	
+
+a {
+  float: left;
+  margin: 0 10px 0 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-size: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 8px;
 }
-/*
-#leadertable tr:nth-child(even){
-background-color:rgba(250, 250, 250, 0.4);
+.twitter {
+  background-image: url("img/twitter.png");
+  background-color: #1b95e0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 0 4px 0 #0983ce;
 }
-*/
-#leadertable caption {text-align: left; font-size: 34px;}
-#scoreboard {
-	color: #fff;
-	font-size: 32px;
-	//font-family: "futura-pt-condensed", "Futura-Condensed", Futura, sans-serif;
-	font-family: Crushed;
-	text-align: left;
-	padding: 10px;
-	padding-top: 7px;
-	padding-bottom: 4px;
-	width: 400px;
-	background-color: rgba(0, 0, 0, 0);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+.twitter:hover { background-color: #0983ce; }
+.youtube {
+  background-image: url("img/youtube.png");
+  background-color: #e52d27;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 0 4px 0 #d31b15;
 }
+.youtube:hover { background-color: #d31b15; }
+.reddit {
+  background-image: url("img/reddit.png");
+  background-color: #ff6666;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 0 4px 0 #dd4444;
+}
+.reddit:hover { background-color: #dd4444; }
+.credits {
+  text-decoration: none;
+  text-align: center;
+  color: #4a4a4a;
+  background-color: #e5e3e3;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 0 4px 0 #c3c1c1;
+}
+.credits:hover { background-color: #c3c1c1; }
+
 </style>
+</head>
+
+<body style="overflow:hidden;">
+<script src="js.cookie.js"></script>
+<div id="signDiv">
+  <div class="viral" style="width:100%;height:100%;position:fixed;z-index:-1"></div>
+  <div class="nam" style="text-align:center;display:inline;visibility:visible;position:fixed;z-index:1;left:50%;top:50%;transform:translate(-50%, -50%);">
+    <div id="gameName">GLORK.IO</div>
+    <div class='menuCard' style="display:inline-block;vertical-align:top;left:35%">
+      <table id="dayleader" class="leaderboard"><caption><b>Today's Leaderboard</b></caption><tr><th>Rank</th><th>Date</th><th>Player</th><th>Score</th></tr><tr><td style="text-align: center" colspan="4">Leaderboard Unavailable</td></tr></table>
+    </div>
+    <div class="menuCard" style = "display: inline-block; vertical-align: top; text-align:center">
+      <p id = 'welcome' style = 'color:white;display:none; font-size:24px;'><b>Welcome back!</b><br><b>Your high score is </b><strong id = 'cookiescore'></strong><br></p>
+      <input style="-webkit-user-select: text;" id='signDiv-username' type="text" maxlength="15" placeholder="Name for leaderboard" spellcheck="false" onkeydown="" autofocus="">
+      <div id='server'>Servers Unavailable</div>
+<!--  <select id='serverSelect'></select> -->
+      <div class="filler"></div>
+      <button class='joinbutton' id='signDiv-signIn'><b>JOIN</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class="blink_me">&#x25b6;</b><b class="blink_me2">&#x25b6;</b><b class="blink_me3">&#x25b6;</b></button>
+      <div style="margin-top:17px; margin-bottom:10px"></div>
+      <button class='playbutton' onclick="tutor()"><b>LEARN GAME</b></button>
+      <div class="filler"></div>
+      <a href="https://goo.gl/QhsFFz" target="_blank" class="linkbutton"><b>INSTRUCTIONS</b></a>
+      <div class="filler"></div>
+      <br><br><br>
+      <span>
+	<a class="twitter" target="_blank" href="http://twitter.com/GlorkIOGame"></a>
+	<a class="credits" target="_blank" href="http://goo.gl/7qakdE/" style="width:190px;font-size:24px">Credits</a>
+	<a class="youtube" target="_blank" href="http://www.youtube.com/channel/UCjcnsN3GTbhPoQt4rH3aW4A"></a>
+	<!-- <a class="reddit"  target="_blank" href="http://reddit.com/u/glorkio"></a> -->
+      </span>
+    </div>
+    <div class='menuCard' style = "display: inline-block; vertical-align: top;">
+      <div id="allleader">
+	<table class="leaderboard"><caption><b>All-Time Leaderboard</b></caption><tr><th>Rank</th><th>Date</th><th>Player</th><th>Score</th></tr><tr><td style="text-align: center" colspan="4">Leaderboard Unavailable</td></tr></table>
+      </div>
+    </div>
+  </div>
 </div>
+
+<audio id="audiotag1" src="audio/rad-powerup.mp3" preload="auto"></audio>
+<audio id="audiotag2" src="audio/rad-powerdown.mp3" preload="auto"></audio>
+<audio id="audiotag3" src="audio/rad-damage.mp3" preload="auto"></audio>
+<audio id="audiotag4" src="audio/cell-death.mp3" preload="auto"></audio>
+<audio id="audiotag6" src="audio/cell-slurp.mp3" preload="auto"></audio>
+<audio id="audiotag5" src="audio/medicine.mp3" preload="auto"></audio>
+<audio id="audiotag7" src="audio/cancer.mp3" preload="auto"></audio>
+<audio id="audiotag8" src="audio/host-death.mp3" preload="auto"></audio>
+<audio id="audiotag9" src="audio/revival.mp3" preload="auto"></audio>
+<audio id="audiotag10" src="audio/cancer-spawn.mp3" preload="auto"></audio>
+<audio id="audiotag11" src="audio/player-click.mp3" preload="auto"></audio>
+<audio id="audiotag12" src="audio/player-newtip.mp3" preload="auto"></audio>
+<script>
+// document.getElementById("got_it").onclick = function(){ document.getElementById("cookies_check_box").display = "none"; }
+
+var HttpClient = function() {
+    this.get = function(aUrl, aCallback) {
+        var anHttpRequest = new XMLHttpRequest();
+        anHttpRequest.onreadystatechange = function() { 
+            if (anHttpRequest.readyState === XMLHttpRequest.DONE) {
+               if (anHttpRequest.status === 200) {
+                  aCallback(anHttpRequest.responseText);
+               }
+            }
+        }
+        anHttpRequest.open( "GET", aUrl, true );            
+        anHttpRequest.send();
+    }
+}
+var client = new HttpClient();
+
+// LEADERBOARDS
+const leaderurl = 'https://salty-scrubland-48776.herokuapp.com/api/leader/virus';
+if (document.domain !== "localhost") {
+  client.get(leaderurl + '?top=10', function(response) {
+     document.getElementById("allleader").innerHTML = response;
+  });
+  client.get(leaderurl + '?top=10&today', function(response) {
+     document.getElementById("dayleader").innerHTML = response;
+  });
+}
+
+
+// SERVER CHOICES
+const serverurl = ["http://glork-usa1.herokuapp.com","http://glork-usa2.herokuapp.com","http://glork-usa3.herokuapp.com","http://glork-eu1.herokuapp.com","http://glork-eu2.herokuapp.com"];
+const servername = ["US1","US2","US3","EU1","EU2"];
+var serverchoices = "";
+
+var loadServerOption = function(name,url){
+    client.get(url+"/api/players",function(response){
+        var thischoice = "<option" + ((serverchoices ==="")?" selected":"") + " value='" + url + "'>" + name + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [" + response + " players]</option>";
+	serverchoices += thischoice;
+	document.getElementById("server").innerHTML = "<select id='serverSelect'>" + serverchoices + "</select>";
+	// console.log(thischoice);
+    });
+}
+
+if (document.domain === "localhost") {
+   loadServerOption("LOC","http://localhost:5000");
+} else {
+   if (document.domain !== "glork.io") {
+     loadServerOption("DEV","http://virusio-test1.herokuapp.com");
+   }
+   for(var i=0; i<servername.length; i++){
+      loadServerOption(servername[i],serverurl[i]);
+   }
+}
+
+</script>
+
+<div id="tutorDiv" style="display:none;"></div>
+<div id="deathDiv" style="display:none;">
+  <div class="nam" style="text-align:center; display:inline; visibility:visible; position:fixed; z-index:1; left:50%; top:50%; transform:translate(-50%, -50%); width:500px;">
+    <div class="panel">
+      <h1 style="color:white;">ERADICATED</h1><br>
+      <div id='scored' style="color:white;font-size:24px;"></div><br>
+      <div id='best' style="display:none;color:white;font-size:24px;">New Personal Best!</div><br>
+      <div class="filler"></div>
+      <button class='joinbutton' onclick="play()"><b>JOIN</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class = "blink_me">&#x25b6;</b><b class = "blink_me2">&#x25b6;</b><b class = "blink_me3">&#x25b6;</b></button>
+      <div style="margin-top:17px; margin-bottom:10px"></div>
+      <button class='playbutton' onclick="tutor()"><b>LEARN GAME</b></button>
+      <div class="filler"></div>
+      <a href="https://goo.gl/forms/lCU8BJn0lCgliuTC3" target="_blank" class="linkbutton"><b>FEEDBACK</b></a>
+    </div>
+  </div>
+</div>
+<div id="gameDiv" style="display:none;background-color:#e6e6e6;">
+  <canvas id="ctx" width="500" height="500" style="border:0px solid #000000;"></canvas>
+  <div id="centerInfoHolder">
+    <div id="vvv"></div>
+  </div>
+  <div id="topInfoHolder">
+<!--
+    <div id="scoreboard" style="width:420px"></div>
+-->
+  </div>
+  <canvas id="minimap" width="150" height="150" style='position:absolute; background-color:white; right:20px; bottom:20px; width="100"; height="100";border:2px solid #000000;'></canvas>
+</div>
+
+<script src="socket.io.js"></script>
+<script src="player.js"></script>
 </body>
-<script src="/socket.io.js" ></script>
-<script src="/player.min.js" ></script>
 </html>
