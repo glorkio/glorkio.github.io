@@ -436,7 +436,7 @@ a {
       <br><br><br>
       <span>
 	<a class="twitter" target="_blank" href="http://twitter.com/GlorkIOGame"></a>
-	<a class="credits" target="_blank" href="http://goo.gl/7qakdE/" style="width:190px;font-size:24px">Credits</a>
+	<a class="credits" target="_blank" href="http://goo.gl/7qakdE" style="width:190px;font-size:24px">Credits</a>
 	<a class="youtube" target="_blank" href="http://www.youtube.com/channel/UCjcnsN3GTbhPoQt4rH3aW4A"></a>
 	<!-- <a class="reddit"  target="_blank" href="http://reddit.com/u/glorkio"></a> -->
       </span>
@@ -464,6 +464,7 @@ a {
 <script>
 // document.getElementById("got_it").onclick = function(){ document.getElementById("cookies_check_box").display = "none"; }
 
+// note: impossible to suppress network errors in console because they are handled by browser
 var HttpClient = function() {
     this.get = function(aUrl, aCallback) {
         var anHttpRequest = new XMLHttpRequest();
