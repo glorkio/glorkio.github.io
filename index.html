@@ -90,7 +90,7 @@ border-radius: 4px;
 }
 
 .button {
-background-color: #4CAF50; /* Green */
+background-color: #4CAF50;
 border: none;
 color: white;
 padding: 10px 10px;
@@ -101,7 +101,7 @@ font-size: 16px;
 }
 
 #server {
-  background-color: pink; /* Green */
+  background-color: white;
   color: black;
   text-align: center;
   text-decoration: none;
@@ -110,7 +110,7 @@ font-size: 16px;
 }
 
 .joinbutton {
-  background-color: white; /* 00b8e6stoplight green */
+  background-color: white;
   font-family: "Open Sans";
   font-weight:bolder;
   border: 2px;
@@ -131,7 +131,7 @@ font-size: 16px;
 }
 
 .playbutton {
-  background-color: #00E6E6; /* 00b8e6stoplight green */
+  background-color: #00E6E6;
   font-family: "Open Sans";
   border: 2px;
   border-radius: 5px;
@@ -152,7 +152,7 @@ font-size: 16px;
 
 .linkbutton {
   text-decoration: none;
-  background-color: #00E6E6; /* 00b8e6stoplight green */
+  background-color: #00E6E6;
   font-family: "Open Sans";
   border: 2px;
   border-radius: 5px;
@@ -166,16 +166,23 @@ font-size: 16px;
   -webkit-box-shadow: 0px 7px #00b3b3;
   box-shadow: 0px 7px #00b3b3;
 }
+.linkbutton:hover {
+  background-color: #00CCCC;
+}
+
 
 .filler {
+  display:inline-block;
+  vertical-align: middle;
   width:300px;
   background-color:white;
-  height:5px;
+  height: 5px;
   border: 0px solid black;
   border-radius:2.5px;
-  margin-top:17px;
+  margin-top:15px;
   margin-bottom:10px;
 }
+
 .nam {
 	width: 100%;
 	white-space: nowrap;
@@ -371,33 +378,31 @@ font-size: 16px;
 	bottom: 20px;
 }
 
-a {
-  float: left;
-  margin: 0 10px 0 0;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  background-size: 24px;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: 8px;
-}
 .twitter {
+  float: left;
+  width: 130px;
+  height: 40px;
+  margin: 5px 10px;
+  color: white;
+  font-size: 24px;
+  line-height: 40px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-size: 24px;
+  background-position: left;
+  background-repeat: no-repeat;
   background-image: url("img/twitter.png");
   background-color: #1b95e0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 0 4px 0 #0983ce;
 }
 .twitter:hover { background-color: #0983ce; }
 .youtube {
   background-image: url("img/youtube.png");
   background-color: #e52d27;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 0 4px 0 #d31b15;
 }
 .youtube:hover { background-color: #d31b15; }
 .reddit {
   background-image: url("img/reddit.png");
   background-color: #ff6666;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2), 0 4px 0 #dd4444;
 }
 .reddit:hover { background-color: #dd4444; }
 .credits {
@@ -414,6 +419,7 @@ a {
 
 <body style="overflow:hidden;">
 <script src="js.cookie.js"></script>
+
 <div id="signDiv">
   <div class="viral" style="width:100%;height:100%;position:fixed;z-index:-1"></div>
   <div class="nam" style="text-align:center;display:inline;visibility:visible;position:fixed;z-index:1;left:50%;top:50%;transform:translate(-50%, -50%);">
@@ -421,24 +427,28 @@ a {
     <div class='menuCard' style="display:inline-block;vertical-align:top;left:35%">
       <table id="dayleader" class="leaderboard"><caption><b>Today's Leaderboard</b></caption><tr><th>Rank</th><th>Date</th><th>Player</th><th>Score</th></tr><tr><td style="text-align: center" colspan="4">Leaderboard Unavailable</td></tr></table>
     </div>
-    <div class="menuCard" style = "display: inline-block; vertical-align: top; text-align:center">
+    <div class="menuCard" style="display:inline-block;vertical-align:top;text-align:center">
       <p id = 'welcome' style = 'color:white;display:none; font-size:24px;'><b>Welcome back!</b><br><b>Your high score is </b><strong id = 'cookiescore'></strong><br></p>
       <input style="-webkit-user-select: text;" id='signDiv-username' type="text" maxlength="15" placeholder="Name for leaderboard" spellcheck="false" onkeydown="" autofocus="">
-      <div id='server'>Servers Unavailable</div>
+      <div id='server'>Loading Servers..</div>
 <!--  <select id='serverSelect'></select> -->
       <div class="filler"></div>
-      <button class='joinbutton' id='signDiv-signIn'><b>JOIN</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class="blink_me">&#x25b6;</b><b class="blink_me2">&#x25b6;</b><b class="blink_me3">&#x25b6;</b></button>
+      <button class='joinbutton' id='signDiv-signIn'><b>PLAY</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class="blink_me">&#x25b6;</b><b class="blink_me2">&#x25b6;</b><b class="blink_me3">&#x25b6;</b></button>
       <div style="margin-top:17px; margin-bottom:10px"></div>
       <button class='playbutton' onclick="tutor()"><b>LEARN GAME</b></button>
       <div class="filler"></div>
       <a href="https://goo.gl/QhsFFz" target="_blank" class="linkbutton"><b>INSTRUCTIONS</b></a>
+      <div style="margin-top:17px; margin-bottom:10px"></div>
+<!--      <div class="filler"></div> -->
+      <a class="linkbutton" target="_blank" title="Glork.io Credits" href="http://goo.gl/7qakdE" style="font-size:24px;width:280px;padding:2px 10px"><b>Credits</b></a>
       <div class="filler"></div>
-      <br><br><br>
       <span>
-	<a class="twitter" target="_blank" href="http://twitter.com/GlorkIOGame"></a>
-	<a class="credits" target="_blank" href="http://goo.gl/7qakdE" style="width:190px;font-size:24px">Credits</a>
+	<a class="twitter" target="_blank" title="Invite your friends" href="https://twitter.com/intent/tweet?url=http://glork.io&via=GlorkIOGame&text=Play+http%3a%2f%2fglork.io+with+me!+%23FightFlu+%23PlayFlu">Tweet</a>
+	<a class="twitter" target="_blank" title="Follow @GlorkIOGame" href="https://twitter.com/intent/follow?original_referer=http://glork.io&screen_name=GlorkIOGame">Follow</a>
+<!-- 
 	<a class="youtube" target="_blank" href="http://www.youtube.com/channel/UCjcnsN3GTbhPoQt4rH3aW4A"></a>
-	<!-- <a class="reddit"  target="_blank" href="http://reddit.com/u/glorkio"></a> -->
+        <a class="reddit"  target="_blank" href="http://reddit.com/u/glorkio"></a>
+ -->
       </span>
     </div>
     <div class='menuCard' style = "display: inline-block; vertical-align: top;">
@@ -494,8 +504,9 @@ if (document.domain !== "localhost") {
 
 
 // SERVER CHOICES
-const serverurl = ["http://glork-usa1.herokuapp.com","http://glork-usa2.herokuapp.com","http://glork-usa3.herokuapp.com","http://glork-eu1.herokuapp.com","http://glork-eu2.herokuapp.com"];
-const servername = ["US1","US2","US3","EU1","EU2"];
+const servecount = 1;
+const serverurl = ["http://glork-usa1.herokuapp.com","http://glork-eu1.herokuapp.com","http://glork-usa2.herokuapp.com","http://glork-eu2.herokuapp.com","http://glork-usa3.herokuapp.com"];
+const servername = ["US1","EU1","US2","EU2","US3"];
 var serverchoices = "";
 
 var loadServerOption = function(name,url){
@@ -513,26 +524,30 @@ if (document.domain === "localhost") {
    if (document.domain !== "glork.io") {
      loadServerOption("DEV","http://virusio-test1.herokuapp.com");
    }
-   for(var i=0; i<servername.length; i++){
+   for(var i=0; i<servecount; i++){
       loadServerOption(servername[i],serverurl[i]);
    }
 }
 
 </script>
 
-<div id="tutorDiv" style="display:none;"></div>
 <div id="deathDiv" style="display:none;">
   <div class="nam" style="text-align:center; display:inline; visibility:visible; position:fixed; z-index:1; left:50%; top:50%; transform:translate(-50%, -50%); width:500px;">
-    <div class="panel">
+    <div class="panel" style="display:inline-block;vertical-align:top">
       <h1 style="color:white;">ERADICATED</h1><br>
       <div id='scored' style="color:white;font-size:24px;"></div><br>
       <div id='best' style="display:none;color:white;font-size:24px;">New Personal Best!</div><br>
-      <div class="filler"></div>
-      <button class='joinbutton' onclick="play()"><b>JOIN</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class = "blink_me">&#x25b6;</b><b class = "blink_me2">&#x25b6;</b><b class = "blink_me3">&#x25b6;</b></button>
+      <div class="filler"></div><br>
+      <button class='joinbutton' onclick="play()"><b>REPLAY</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class = "blink_me">&#x25b6;</b><b class = "blink_me2">&#x25b6;</b><b class = "blink_me3">&#x25b6;</b></button>
       <div style="margin-top:17px; margin-bottom:10px"></div>
-      <button class='playbutton' onclick="tutor()"><b>LEARN GAME</b></button>
-      <div class="filler"></div>
-      <a href="https://goo.gl/forms/lCU8BJn0lCgliuTC3" target="_blank" class="linkbutton"><b>FEEDBACK</b></a>
+      <button class='playbutton' onclick="tutor()"><b>LEARN GAME</b></button><br>
+      <div class="filler"></div><br>
+      <a href="https://goo.gl/forms/lCU8BJn0lCgliuTC3" target="_blank" class="linkbutton"><b>FEEDBACK</b></a><br>
+      <div class="filler"></div><br>
+      <span>
+	<a id="twitterBrag" class="twitter" target="_blank" title="Share your score" href="https://twitter.com/intent/tweet?url=http://glork.io&via=GlorkIOGame&text=Play+http%3a%2f%2fglork.io+with+me!+%23FightFlu+%23PlayFlu">Tweet</a>
+	<a class="twitter" target="_blank" title="Follow @GlorkIOGame" href="https://twitter.com/intent/follow?original_referer=http://glork.io&screen_name=GlorkIOGame">Follow</a>
+      </span>
     </div>
   </div>
 </div>
@@ -542,9 +557,6 @@ if (document.domain === "localhost") {
     <div id="vvv"></div>
   </div>
   <div id="topInfoHolder">
-<!--
-    <div id="scoreboard" style="width:420px"></div>
--->
   </div>
   <canvas id="minimap" width="150" height="150" style='position:absolute; background-color:white; right:20px; bottom:20px; width="100"; height="100";border:2px solid #000000;'></canvas>
 </div>
